@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>CSS Grid</h1>
+    CSS Grid is the most useful tool to create layouts and arrange content without bootstrap, tables
+    or float
+    <h2>Grid vs. Flex</h2>
+    There are a lot of similar features in Grid and Flex, but I would create the bigger layout and
+    content positioning with Grid and use flex more in use cases which are dependent on the content
+    and the size of the content
+</header>
+
+<section>
+    <h3>Simple Grid</h3>
+    <p>
+        We have to definde <code>display: grid</code> on the parent. Afterwards all the children are
+        handled as grid items
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="grid">
+            <p>This is a grid item</p>
+            <p>This is a grid item</p>
+            <p>This is a grid item</p>
+            <p>This is a grid item</p>
+            <p>This is a grid item</p>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .grid {
+            display: grid;
+        }
+        </pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid in the
+            Mozilla docs</a>
+    </div>
+</section>
+<section>
+    <h3>Grid template columns</h3>
+    <p>With this property we can define the columns of our grid. The <code>fr</code> unit stands for
+        fraction</p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="grid fr">
+            <p>2fr</p>
+            <p>5fr</p>
+            <p>1fr</p>
+            <p>1fr</p>
+            <p>1fr</p>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .fr {
+            grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex_value">Flex values in Mozilla
+            docs</a>
+    </div>
+</section>
+<section>
+    <h3>Layouts with grid</h3>
+    <p>You can represent most of the layouts with the grid. In this example we create multiple
+        grid-areas. Please note that they have to be rectangular </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="grid area">
+            <div class="header">Header</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="content">
+                <h1>Content</h1>
+                <p>
+                    This text will be not be longer than 20chars. Lorem ipsum dolor sit amet,
+                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                    et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata
+                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna
+                </p>
+                <p>
+                    This text will be not be longer than 20chars. Lorem ipsum dolor sit amet,
+                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                    et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata
+                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna
+                </p>
+            </div>
+            <div class="footer">Footer</div>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .header {
+            grid-area: header;
+        }
+        .footer {
+            grid-area: footer;
+        }
+        .content {
+            grid-area: content;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .area{
+            grid-auto-rows: minmax(100px, auto);
+            grid-auto-columns: 200px 3fr;
+            grid-template-areas:
+                    "header header "
+                    "sidebar content "
+                    "sidebar footer";
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_Areas">Grid areas in Mozilla
+            docs</a>
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid
+            template areas in Mozilla docs</a>
+    </div>
+</section>
+
+<section>
+    <h3>Overlapping Images with Grid</h3>
+    <p>If you have a grid and put an image and another grid-item on the same place, you get the
+        following cool looking result.</p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="grid described_img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/SBB_Historic_-_F_122_00964_001_-_Schoenenwerd_Stationsgebaeude_Bahnseite.jpg/320px-SBB_Historic_-_F_122_00964_001_-_Schoenenwerd_Stationsgebaeude_Bahnseite.jpg">
+            <p>
+                <a href="https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_122_00964_001_-_Schoenenwerd_Stationsgebaeude_Bahnseite.jpg">Hans-Rudolf
+                    Berner</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA
+                4.0</a>, via Wikimedia Commons</p>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .described_img {
+            align-items: end;
+        }
+        .described_img {
+            max-width: 640px;
+        }
+
+        .described_img > img {
+            grid-column: 1;
+            grid-row: 1
+        }
+        </pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://www.youtube.com/watch?v=HFG3BKOqOlE">Youtube video describing some css grid
+            tricks for overlapping content</a>
+    </div>
+</section>
+
+
+<section>
+    <h3>Responsive grid</h3>
+    <p>Simply display a list of items, cards and more without media querys, just using css grid </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="grid responsive">
+            <div class="grid described_img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/SBB_Historic_-_F_122_00964_001_-_Schoenenwerd_Stationsgebaeude_Bahnseite.jpg/320px-SBB_Historic_-_F_122_00964_001_-_Schoenenwerd_Stationsgebaeude_Bahnseite.jpg">
+                <p>
+                    <a href="https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_122_00964_001_-_Schoenenwerd_Stationsgebaeude_Bahnseite.jpg">Hans-Rudolf
+                        Berner</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC
+                    BY-SA 4.0</a>, via Wikimedia Commons
+                </p>
+            </div>
+            <div class="grid described_img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SBB_Historic_-_F_122_00770_006_-_Olten_Bahnhofgebaeude.jpg/320px-SBB_Historic_-_F_122_00770_006_-_Olten_Bahnhofgebaeude.jpg">
+                <p>
+                    <a href="https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_122_00770_006_-_Olten_Bahnhofgebaeude.jpg">Hans-Rudolf
+                        Berner</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC
+                    BY-SA 4.0</a>, via Wikimedia Commons
+                </p>
+            </div>
+            <div class="grid described_img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/SBB_Historic_-_F_122_00002_012_-_Aarau_Bahnhofgebaeude_Bahnseite.jpg/320px-SBB_Historic_-_F_122_00002_012_-_Aarau_Bahnhofgebaeude_Bahnseite.jpg">
+                <p>
+                    <a href="https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_122_00002_012_-_Aarau_Bahnhofgebaeude_Bahnseite.jpg">Hans-Rudolf
+                        Berner</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC
+                    BY-SA 4.0</a>, via Wikimedia Commons
+                </p>
+            </div>
+            <div class="grid described_img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/SBB_Historic_-_F_122_00050_004_-_Ausserberg_BLS_Stationsgebaeude_Bahnseite.jpg/320px-SBB_Historic_-_F_122_00050_004_-_Ausserberg_BLS_Stationsgebaeude_Bahnseite.jpg">
+                <p>
+                    <a href="https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_122_00050_004_-_Ausserberg_BLS_Stationsgebaeude_Bahnseite.jpg">Hans-Rudolf
+                        Berner</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC
+                    BY-SA 4.0</a>, via Wikimedia Commons
+                </p>
+            </div>
+            <div class="grid described_img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/SBB_Historic_-_F_122_01196_003_-_Winterthur_Hauptbahnhof_Strassenseite.jpg/320px-SBB_Historic_-_F_122_01196_003_-_Winterthur_Hauptbahnhof_Strassenseite.jpg">
+                <p>
+                    <a href="https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_122_01196_003_-_Winterthur_Hauptbahnhof_Strassenseite.jpg">Hans-Rudolf
+                        Berner</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC
+                    BY-SA 4.0</a>, via Wikimedia Commons
+                </p>
+            </div>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .responsive{
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            justify-items: center;
+            gap: 0.5rem;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://css-tricks.com/intrinsically-responsive-css-grid-with-minmax-and-min/">Short
+            CSS Tricks article on responsive grid</a>
+        <a href="https://evanminto.com/blog/intrinsically-responsive-css-grid-minmax-min/"
+           target="_blank">
+            Intrinsically Responsive CSS Grid with minmax() and min()
+        </a>
+    </div>
+</section>
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            You can use grid to create a quick and easy layout for your webpage. No more tables,
+            bootstrap, float or pixel calculations
+        </li>
+        <li>
+            Create components, cards and other layouts simply with grid (and nested grids).
+        </li>
+        <li>
+            Use the grid to simply show a list of items in a responsive way
+        </li>
+    </ul>
+</section>
+</body>
+</html>

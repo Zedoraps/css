@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Functions</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>CSS Functions</h1>
+    Despite CSS not being a programming language, there are functions which we can use.
+    <h2>Calculations</h2>
+    CSS is now able to basic calculations like adding values from different types and more
+    <h2>Min, max</h2>
+    Those are functions which can dynamically select the smaller/bigger value from multiple
+    arguments
+</header>
+
+<section>
+    <h3>Calc</h3>
+    <p>
+        With calc we can do basic math operations on different types of css units
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="calc">Div with the length of 50vw minus 100 px</div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .calc {
+            width: calc(50vw - 100px);
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">Calc in the Mozilla docs</a>
+    </div>
+</section>
+<section>
+    <h3>Min</h3>
+    <p>With min we have a function which always selects the smaller value. This can be useful for
+        images, if the full image can be displayed the width should match with the size of the
+        image, if not we should use a smaller value depending on the users view-width</p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="min">This div has a width of 500px or 100% of the parent depending on which one
+            is smaller.
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .min {
+            width: min(500px, 100%);
+        }
+        </pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/min">Min in the Mozilla docs</a>
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">CSS functions in
+            the Mozilla docs</a>
+    </div>
+</section>
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            You can calculate a lot of layouts with the integrated CSS functions
+        </li>
+    </ul>
+</section>
+</body>
+</html>

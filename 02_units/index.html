@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Units</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>CSS Units</h1>
+    There are a lot of CSS units which will make your life a lot easier.
+    <h2>Font Unis</h2>
+    There are REM, EM and CH which are in relation to the fontsize.
+    <h2>Viewport Units</h2>
+    VH and VW are units depending on the browsers viewport. Simplified in relation to how large
+    their browser window is.
+</header>
+
+<section>
+    <h3>rem</h3>
+    <p>
+        This unit references to the root font size. Eg <code>1rem</code> is the same as the root
+        font size.
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="text-horizontally">
+            <span>Normal text</span>
+            <span class="two-rem">Double the normal text</span>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .two-rem {
+            font-size: 2rem;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages">Units
+            and more in the Mozilla docs</a>
+    </div>
+</section>
+<section>
+    <h3>em</h3>
+    <p>This unit references to the parent font size. Eg <code>1rem</code> is the same as the root
+        font size.
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <h1>Title with emoji which is 1.5 times the size<span class="icon">🦄</span></h1>
+        <div>and if we use the same emoji in a div it's relative to the div 1.5 times the size <span
+                class="icon">🦄</span></div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .icon {
+            font-size: 1.5em;
+        }</pre>
+    </div>
+</section>
+<section>
+    <h3>vw and vh</h3>
+    <p>Those two units represent the users viewport. So <code>100vw</code> are 100% of the users
+        view-width</p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="vw">
+            This div is 30% of the users view width
+        </div>
+        <div class="vh">
+            This div is 30% of the users view height
+        </div>
+
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .vw{
+            width: 30vw;
+        }
+        .vh {
+            height: 30vh;
+        }</pre>
+    </div>
+</section>
+<section>
+    <h3>ch</h3>
+    <p>This property is also relativ to the font size. More specifict to the width of the 0 char.
+        This is mostly usefull to set the width of inputs or paragraphs</p>
+    <h4>Example</h4>
+    <div class="example">
+        <p class="ch">This text will be not be longer than 20chars. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .ch {
+            width: 20ch;
+        }</pre>
+    </div>
+</section>
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            Use different untis than px to create more responsive and flexible designs
+        </li>
+    </ul>
+</section>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Scrolling</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Scrolling in CSS</h1>
+    You can simply make your website scroll differently with the following css properties
+    <h2>How to scroll?</h2>
+    You can link to specific ids in your webpage with a normal href. The browser will automatically
+    scroll to the element with the id.
+</header>
+
+<section>
+    <h3>Smooth scrolling</h3>
+    <p>
+        The simple line will change the behaviour on the whole page
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <nav>
+            <a href="#page-1">1</a>
+            <a href="#page-2">2</a>
+            <a href="#page-3">3</a>
+        </nav>
+        <div class="scroll-container">
+            <div class="scroll-page" id="page-1">1</div>
+            <div class="scroll-page" id="page-2">2</div>
+            <div class="scroll-page" id="page-3">3</div>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        html {
+            scroll-behavior: smooth;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior">Scroll behaviour
+            in the Mozilla docs</a>
+    </div>
+</section>
+
+<section>
+    <h3>Scroll padding</h3>
+    <p>
+        If you have a fix navigation on top or something else, the link which you clicked can be
+        covered. But there is a simple fix.
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <nav>
+            <a href="#page-4">4</a>
+            <a href="#page-5">5</a>
+            <a href="#page-6">6</a>
+        </nav>
+        <div class="scroll-container scroll-padding">
+            <div class="scroll-page" id="page-4">4</div>
+            <div class="scroll-page" id="page-5">5</div>
+            <div class="scroll-page" id="page-6">6</div>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .scroll-padding {
+            scroll-padding: 50px;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior">Scroll behaviour
+            in the Mozilla docs</a>
+    </div>
+</section>
+
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            You can improve the look and feel of the scrolling in your webpage with those simple css
+            properties
+        </li>
+    </ul>
+</section>
+</body>
+</html>

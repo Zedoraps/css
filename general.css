@@ -1,0 +1,78 @@
+/**
+  General Styling
+ */
+:root {
+    --background-color: #d5e8fc;
+    --accent-color: #2e85e8;
+    --border-color: #000000;
+}
+
+
+body {
+    margin: 0;
+    counter-reset: h3counter;
+    background-color: var(--background-color);
+}
+
+* {
+    font-family: "Segoe UI", serif;
+    line-height: 1.3em;
+}
+
+header {
+    padding: 3rem;
+    display: grid;
+    background: linear-gradient(135deg, var(--background-color) 50%, var(--accent-color) 50%);
+}
+
+h3:before {
+    content: counter(h3counter) ". ";
+    counter-increment: h3counter;
+}
+
+section {
+    margin: 1rem;
+    padding: 1.8rem;
+    box-shadow: rgba(0, 0, 0, 0.22) 0 5px 40px;
+    background-color: white;
+}
+
+section p, section li {
+    max-width: 90ch;
+}
+
+section h4 {
+    margin-bottom: 0.5rem;
+}
+
+.example {
+    border: var(--border-color) solid 1px;
+    margin-block: 0.5rem;
+    min-height: 3rem;
+}
+
+.code {
+    border: var(--border-color) solid 1px;
+    margin-block: 0.5rem;
+    min-height: 3rem;
+}
+
+a[target=_blank]::after {
+    content: " \25F3";
+}
+
+.tricks li::marker {
+    content: "🤯 "
+}
+
+.tricks li {
+    font-size: 1.3rem;
+    line-height: 2em;
+}
+
+code {
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    padding-inline: 0.2em;
+}

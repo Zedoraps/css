@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>How to center in CSS?</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Center</h1>
+    There are different ways of centering elements, we will have a look at the most common and easy
+    ones
+    <h2>Horizontally</h2>
+    Horizontally means the same margin from left and right
+    <h2>Vertically</h2>
+    Vertically means the same margin from top to bottom
+    <h2>Block and inline elements</h2>
+    <p>Elements have different behavior depending on their <code>display</code> property. <br>There
+        are different ways of centering depending on the display property</p>
+</header>
+
+<section>
+    <h3>Horizontally with inline element</h3>
+    <p>Inline elements do not create a new line as the name <code>inline</code> already hints and
+        take only the space of the
+        content. So they <strong>can not</strong> be centered horizontally, but there is a solution.<br>
+        You have to put your inline element into a div or other block element and set the property
+        text-align on the block element.
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="text-horizontally">
+            <span>This text is centered horizontally</span>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .text-horizontally {
+            text-align: center;
+        }
+        </pre>
+    </div>
+</section>
+<section>
+    <h3>Horizontally with block element</h3>
+    <p>Block elements must have a width and then we can center them with a <code>auto</code> margin.
+        In the case below we will set the second margin value to <code>auto</code>. This means that
+        the browser will have the same margin on the left as ond the right side. In other words the
+        block element is centered!<br>
+        This only centers the container and not the content.
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="block-center">
+            This is a block element
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .block-center {
+            width: 200px;
+            margin: 0 auto;
+        }</pre>
+    </div>
+</section>
+<section>
+    <h3>Horizontally with flex box </h3>
+    <p>
+        The flex box allows you to arrange the children in a lot of different ways but also in the
+        center.<br> Explore the options in the devtools and see instantly how the content will
+        behave.<br>
+        Keep in mind to set <code>display: flex</code> on the parent and not on the element you want
+        to center.
+
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="flex-horizontally">
+            <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor
+                invidunt ut labore et dolore magna aliquyam erat
+            </div>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .flex-center {
+            display: flex;
+            justify-content: center;
+        }</pre>
+    </div>
+</section>
+<section>
+    <h3>Vertically with inline element</h3>
+    <p>We can vertically center an element with the <code>vertical-align: middle</code> property.
+        But this only works under some special conditions!</p>
+    <ul>
+        <li>To vertically align an inline element's box inside its containing line box. For example,
+            it could be used to vertically position an image in a line of text.
+        </li>
+        <li>To vertically align the content of a cell in a table.</li>
+    </ul>
+
+    <h4>Example</h4>
+    <div class="example">
+        <p class="vertical-align-parent">The emoji is centered<span>🚆</span></p>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .vertical-align-parent {
+            font-size: 1.8rem;
+        }
+        .vertical-align-parent span {
+            font-size: 0.8rem;
+            vertical-align: middle;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">Vertical-align
+            in
+            mozilla docs</a>
+    </div>
+</section>
+<section>
+    <h3>Vertically with flex box</h3>
+    <p>The simplest way is also here to use the flex box. </p>
+    <h4>Example</h4>
+    <div class="example">
+        <div class="flex-vertically">
+            <div>
+                This is a block element
+            </div>
+        </div>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        .flex-vertically {
+            height: 200px;
+            display: flex;
+            align-items: center;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning
+            items in a flex container</a>
+    </div>
+</section>
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            Know what are inline and block elements are and how they behave different
+        </li>
+        <li>
+            Align items with flex box
+        </li>
+    </ul>
+</section>
+
+
+</body>
+
+</html>

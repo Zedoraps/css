@@ -1,0 +1,31 @@
+.two-rem {
+    font-size: 2rem;
+}
+
+.icon {
+    font-size: 1.5em;
+}
+
+.vw {
+    width: 30vw;
+    background-color: rgba(215, 215, 215, 0.77);
+}
+
+.vh {
+    height: 30vh;
+    background-color: rgba(215, 215, 215, 0.77);
+}
+
+.ch {
+    width: 20ch;
+}
+
+
+:root {
+    --background-color: #fcfccb;
+    --accent-color: #ef702b;
+}
+
+header {
+    background: linear-gradient(53deg, var(--background-color) 80%, var(--accent-color) 80%);
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>CSS selectors</h1>
+    Just a short and helpful refresher about the css selectors
+    <h2>What can be selected</h2>
+    There are a lot of events (e.g. checked, hover, enabled, ...) on html element which can be
+    selected, but there are also some more to browse the children (first child, even children, ...)
+</header>
+
+<section>
+    <h3>Simple example</h3>
+    <p>
+        The simple line will change the behaviour on the whole page
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Last</li>
+        </ul>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        ul li:first-child {
+            color: #0fbcf3;
+        }
+
+        ul li:last-child {
+            background-color: #0fbcf3;
+        }
+
+        ul li:nth-child(odd){
+            border: blue 1px solid;
+        }
+
+        ul li:first-letter{
+            font-size: 2rem;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes
+            in the Mozilla docs</a>
+    </div>
+</section>
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            Write less code if you use pseudo classes correctly
+        </li>
+        <li>
+            Give the user better feedback with the input pseudo classes
+        </li>
+    </ul>
+</section>
+</body>
+</html>

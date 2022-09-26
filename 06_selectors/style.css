@@ -1,0 +1,16 @@
+.example li:first-child {
+    color: #0fbcf3;
+}
+
+.example li:last-child {
+    background-color: #0fbcf3;
+}
+
+.example li:nth-child(odd){
+    border: blue 1px solid;
+}
+
+.example li:first-letter{
+    font-size: 2rem;
+}
+

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Animations</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>CSS Animations</h1>
+    Animations without javascript? Yes it works, and it's pretty easy (for simple use-cases)
+</header>
+
+<section>
+    <h3>Transitions</h3>
+    <p>
+        If the state of an element changes, you can smoothly transition in between the states.
+    </p>
+    <h4>Example</h4>
+    <div class="example">
+        <button>Example Button</button>
+    </div>
+    <h4>Code</h4>
+    <div class="code">
+        <pre>
+        button:hover {
+            background-color: #00162d;
+            color: white;
+            border: black solid 3px;
+            transition: all 500ms ease-in-out;
+        }</pre>
+    </div>
+    <h4>More information</h4>
+    <div class="links">
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions in the Mozilla Docs</a>
+    </div>
+</section>
+
+<section>
+    <h2>Tricks</h2>
+    <ul class="tricks">
+        <li>
+            Add some dynamic content, but do not overuse the animations
+        </li>
+    </ul>
+</section>
+</body>
+</html>

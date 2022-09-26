@@ -1,0 +1,19 @@
+.calc {
+    width: calc(50vw - 100px);
+    background-color: rgba(215, 215, 215, 0.77);
+}
+
+.min {
+    width: min(500px, 100%);
+    background-color: rgba(215, 215, 215, 0.77);
+}
+
+
+:root {
+    --background-color: rgb(193, 255, 222);
+    --accent-color: rgba(11, 255, 124, 0.45);
+}
+
+header {
+    background: linear-gradient(4deg, var(--background-color) 70%, var(--accent-color) 70%);
+}
