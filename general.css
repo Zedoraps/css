@@ -23,6 +23,14 @@ header {
     padding: 3rem;
     display: grid;
     background: linear-gradient(135deg, var(--background-color) 50%, var(--accent-color) 50%);
+    grid-template-columns: 5fr 2fr;
+}
+
+@media only screen and (max-width: 600px) {
+header {
+    grid-template-columns: 1fr;
+}
+
 }
 
 h3:before {

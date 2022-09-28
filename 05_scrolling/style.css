@@ -12,7 +12,6 @@ header {
 }
 
 
-
 .scroll-padding {
     scroll-padding: 50px;
 }
@@ -21,28 +20,32 @@ header {
 /**
 Source: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior?retiredLocale=de
  */
-a {
+.example a {
     display: inline-block;
     width: 50px;
     text-decoration: none;
 }
-nav,
+
+.example nav,
 .scroll-container {
     display: block;
     margin: 0 auto;
     text-align: center;
 }
-nav {
+
+.example nav {
     width: 339px;
     padding: 5px;
     border: 1px solid black;
 }
+
 .scroll-container {
     width: 350px;
     height: 200px;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
+
 .scroll-page {
     display: flex;
     align-items: center;
